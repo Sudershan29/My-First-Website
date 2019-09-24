@@ -1,0 +1,273 @@
+*
+{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+
+body{
+  height:3000px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  z-index: 1;
+  width:100%;
+}
+.nav-alt{
+  background-color: black ;
+  box-shadow: 0px 0px 17px 0px;
+  transition: all 0.5s ease-in;
+
+}
+section{
+  min-height: 8vh;
+  justify-content: space-around;
+  margin:1px;
+
+}
+.nav-logo{
+  color: rgb(226,226,226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size:15px;
+}
+
+.nav-links_sudu{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav-lines{
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links_sudu li{
+  list-style: none;
+}
+.nav-links_sudu a{
+  color: rgb(226,226,226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+
+.nav-lines div{
+  width:25px;
+  height:3px;
+  background-color: rgb(226,226,226);
+  margin:5px;
+  transition:  all 0.3s ease;
+}
+
+
+
+@media screen and (max-width:1024px){
+  .nav-links_sudu{
+    width:100%;
+  }
+}
+
+@media screen and (max-width:768px){
+  body{
+    overflow-x: hidden;
+  }
+  .nav-links_sudu{
+    position:absolute;
+    left:0px;
+    height:92vh;
+    top:8vh;
+    background-color: black;
+    color:rgb(226,226,226);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:50%;
+    transform: translateX(-100%);
+    transition: all 0.2s ease-in;
+  }
+  .nav-links_sudu li{
+    opacity:0;
+  }
+  .nav-lines{
+    align-items: right;
+    display: block;
+  }
+}
+
+.nav-active{
+  transform:translateX(0%);
+  z-index: 1;
+}
+
+@keyframes navLinkFade{
+  from{
+    opacity:0;
+    tranform:translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform:translateX(0px);
+  }
+}
+
+
+.img1{
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.7)),url("..//img/1.jpg");
+  background-size: 1500px 100%;
+}
+.img2{
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.7)),url("..//img/2.jpg");
+  background-size: 1500px 100%;
+}
+.img3{
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.7)),url("..//img/3.jpg");
+  background-size: 1500px 100%;
+}
+
+.slider,.slider ul,.slider ul li
+{
+  height: 710px;
+  width:100%;
+  color: white;
+}
+
+.toggle .l1{
+  transform: rotate(45deg) translate(2px,4px);
+}
+
+.toggle .l2{
+  opacity: 0;
+}
+
+.toggle .l3{
+  transform: rotate(-45deg) translate(7px,-10px);
+}
+
+.intro-block{
+  position: relative;
+  padding: 100px 0px;
+  text-align: center;
+}
+
+.sub-heading{
+  position: relative;
+  margin-bottom: 75px;
+}
+
+.sub-heading:before
+{
+  content:"";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -3%;
+  width:6%;
+  height: 5px;
+  background-color: #0000;
+  z-index: 1;
+  transition: 0.3s ease;
+}
+
+.sub-heading:hover:before
+{
+  width:24%;
+  margin-left: -12px;
+}
+
+.sub-heading:after
+{
+  content: "";
+  position: absolute;
+  top:100%;
+  margin-left: -12%;
+  width: 24%;
+  height: 1px;
+  background-color: #0100;
+}
+
+.sub-heading p
+{
+  color: #818181;
+  display: inline-block;
+  padding: 0px 0px 20px;
+  line-height: 24px;
+  letter-spacing: 0.050em;
+}
+
+.intro-block{
+  position: relative;
+  background-color: #f7f7f7;
+  margin: 50px 0px 0px;
+  padding: 70px 25px 40px;
+
+}
+
+.intro-block:hover, .intro-block.active
+{
+  background-color:#818181;
+}
+
+.intro-block:hover
+{
+  transition: 0.6s ease-out;
+}
+
+
+.intro-block h3{
+  font-size:18px;
+  color:black;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.intro-block p{
+  color:black;
+}
+
+.intro-block:hover h3,.intro-block:hover p{
+  color:white;
+  transition: 0.3s ease;
+}
+
+.feature-area
+{
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,1)),url("..//img/bg2.jpg");
+  background-size: 1750px 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+.single-feature h3,p
+{
+  color:white;
+  text-shadow: 1px 1px #818181;
+}
+.title .sub-heading p{
+  color:#f3f3f3;
+  border-color:black;
+  text-shadow: 0.5px 0.5px #818181;
+}
+#feature1{
+  color:white;
+  text-shadow: 1px 1px #818181;
+}
+.single-feature{
+  position:relative;
+  width:325px;
+  float:left;
+  padding:30px 0;
+  text-align: center;
+  border-right:1px solid #818181;
+  border-bottom:1px solid #818181;
+  transition: 0.3s ease-in;
+}
