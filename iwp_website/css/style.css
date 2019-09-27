@@ -3,6 +3,7 @@
   margin:0px;
   padding:0px;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body{
@@ -14,7 +15,7 @@ nav{
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   position: fixed;
   z-index: 1;
   width:100%;
@@ -34,12 +35,13 @@ section{
 .nav-logo{
   color: rgb(226,226,226);
   text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size:15px;
+  letter-spacing: 7px;
+  font-size:20px;
 }
 
 .nav-links_sudu{
   display: flex;
+  font-size:15px;
   justify-content: space-around;
   width: 100%;
 }
@@ -59,6 +61,7 @@ section{
   text-transform: uppercase;
   font-weight: bold;
   font-size: 10px;
+  transition: all 2s ease-out;
 }
 
 
@@ -70,6 +73,11 @@ section{
   transition:  all 0.3s ease;
 }
 
+.slider .slider-carousel
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+}
 
 
 @media screen and (max-width:1024px){
@@ -86,7 +94,7 @@ section{
     position:absolute;
     left:0px;
     height:92vh;
-    top:8vh;
+    top:9.5vh;
     background-color: black;
     color:rgb(226,226,226);
     display:flex;
@@ -128,7 +136,7 @@ section{
 }
 .img2{
   background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.7)),url("..//img/2.jpg");
-  background-size: 1500px 100%;
+  background-size: 1440px 710px;
 }
 .img3{
   background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.7)),url("..//img/3.jpg");
@@ -207,7 +215,7 @@ section{
 
 .intro-block{
   position: relative;
-  background-color: #f7f7f7;
+  background-color: #D3D3D3;
   margin: 50px 0px 0px;
   padding: 70px 25px 40px;
 
@@ -223,12 +231,17 @@ section{
   transition: 0.6s ease-out;
 }
 
+.intro-area{
+  background-image: url("..//img/015.jpg");
+  background-size: 1500px 100%;
 
+}
 .intro-block h3{
   font-size:18px;
   color:black;
   font-weight: 700;
   margin-bottom: 15px;
+  text-shadow:1px 1px white;
 }
 
 .intro-block p{
@@ -237,6 +250,7 @@ section{
 
 .intro-block:hover h3,.intro-block:hover p{
   color:white;
+  text-shadow: 2px 2px black;
   transition: 0.3s ease;
 }
 
@@ -267,7 +281,99 @@ section{
   float:left;
   padding:30px 0;
   text-align: center;
-  border-right:1px solid #818181;
-  border-bottom:1px solid #818181;
   transition: 0.3s ease-in;
+}
+.testi{
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("..//img/bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
+.testi .carousel-indicators
+{
+    bottom: -8px;
+}
+.carousel-inner img{
+  width:200px;
+  height:200px;
+  border-radius: 50%;
+  border:2px solid black;
+  padding:5px;
+}
+.testi .carousel-indicators li{
+  background-color: black;
+}
+.contact-textarea{
+  padding:100px 0;
+}
+.divider{
+  border-right:1px solid #818181;
+}
+.contact-area h3
+{
+  margin-bottom: 18px;
+}
+
+.contact-area span{
+  display: block;
+  font-size:12;
+  line-height: normal;
+  letter-spacing: 0.050em;
+}
+
+.contact-area .form-control,.contact-area textarea{
+  font-family: 'Montserrat', sans-serif;
+  background:#0010;
+  border:1px solid;
+  color:#818181;
+  height:45px;
+  font-weight: 400;
+  border-radius: 0;
+  letter-spacing: 0.050em;
+  text-transform: uppercase;
+}
+
+.contact-area .form-group
+{
+  margin-bottom:24px;
+}
+.contact-area textarea{
+  min-height: 115px;
+}
+.contact-area .default-btn{
+  padding:10px;
+
+}
+
+.contact-address ul li{
+  list-style: none;
+}
+
+.operating-system{
+ background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,1)),url("..//img/bgm3.jpg");
+  
+}
+.slider1 {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider1:hover {
+  opacity: 1;
+}
+
+.slider1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #818181;
+  cursor: pointer;
 }
